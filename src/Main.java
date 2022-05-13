@@ -16,7 +16,7 @@ public class Main {
 
     }
 
-    //printing te board game
+    // printing the board game
     static void printBoard() {
         System.out.println("          |---|---|---|");
         System.out.println("          | " + game[0] + " | "
@@ -33,7 +33,7 @@ public class Main {
         System.out.println("          |---|---|---|");
     }
 
-    //changing th turn
+    // changing the turn
     public static void turn() {
         Scanner scanner = new Scanner(System.in);
         while (!checking) {
@@ -52,7 +52,7 @@ public class Main {
 
     }
 
-    //setter for player 1
+    // setter for player 1
     static void set_p1(int num1) {
         switch (num1) {
             case 1:
@@ -95,7 +95,7 @@ public class Main {
 
     }
 
-    //setter for player 2
+    // setter for player 2
     static void set_p2(int num2) {
 
         switch (num2) {
@@ -138,7 +138,7 @@ public class Main {
         }
     }
 
-    //checking who win the game
+    // checking who win the game
     static void check() {
 
         if (game[2].equals(game[1]) && game[1].equals(game[0]) && game[2].equals(game[0])) {

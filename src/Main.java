@@ -2,12 +2,12 @@
 import java.util.Scanner;
 
 public class Main {
+    // Variables
     static String[] game = new String[]{"7", "8", "9", "4", "5", "6", "1", "2", "3"};
     static boolean checking = false;
     static int player_turn;
 
     public static void main(String[] args) {
-       // printBoard();
         System.out.println("\n\n    Player 1 will be X and Player 2 will be O\n");
         player_turn = 1;
         turn();
@@ -16,6 +16,7 @@ public class Main {
 
     }
 
+    //printing te board game
     static void printBoard() {
         System.out.println("          |---|---|---|");
         System.out.println("          | " + game[0] + " | "
@@ -32,6 +33,7 @@ public class Main {
         System.out.println("          |---|---|---|");
     }
 
+    //changing th turn
     public static void turn() {
         Scanner scanner = new Scanner(System.in);
         while (!checking) {
@@ -39,13 +41,10 @@ public class Main {
             if (player_turn == 1) {
                 System.out.println("\n    Player 1 please enter a number:");
                 int n1 = scanner.nextInt();
-                // repeated();
                 set_p1(n1);
-            }
-            else if (player_turn == 2) {
+            } else if (player_turn == 2) {
                 System.out.println("\n    Player 2 please enter a number:");
                 int n2 = scanner.nextInt();
-                // repeated();
                 set_p2(n2);
             }
         }
@@ -53,6 +52,7 @@ public class Main {
 
     }
 
+    //setter for player 1
     static void set_p1(int num1) {
         switch (num1) {
             case 1:
@@ -95,6 +95,7 @@ public class Main {
 
     }
 
+    //setter for player 2
     static void set_p2(int num2) {
 
         switch (num2) {
@@ -137,6 +138,7 @@ public class Main {
         }
     }
 
+    //checking who win the game
     static void check() {
 
         if (game[2].equals(game[1]) && game[1].equals(game[0]) && game[2].equals(game[0])) {
@@ -180,14 +182,4 @@ public class Main {
             turn();
         }
     }
-
-//    static void repeated() {
-//    for(int i =0;i<9;i++)
-//        if(game[i]=="X"||game[i]=="O"){
-//            System.out.println("Sorry this slot is full please try again");
-//            turn();
-//        }
-//    }
-
-
 }
